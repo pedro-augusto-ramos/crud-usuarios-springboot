@@ -59,7 +59,7 @@ public class UsuarioService {
         repository.deleteById(id);
     }
 
-    public void verificarUsuario(Usuario usuario){
+    private void verificarUsuario(Usuario usuario){
         if(usuario.getEmail() == null || usuario.getEmail().isBlank()){
             throw new InvalidDataException("Email é obrigatório");
         }
